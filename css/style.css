@@ -168,7 +168,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 /* ---------- Utilities ---------- */
 .container {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -3480,15 +3480,17 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 .cv-card {
   position: relative;
-  width: calc(50% - 16px);
-  min-width: 300px;
-  max-width: 500px;
+  width: calc(50% - 20px);
+  min-width: 420px;
   padding: 32px;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   transition: all 0.3s ease;
   overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .cv-entry:hover .cv-card {
