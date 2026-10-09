@@ -548,12 +548,15 @@ button { cursor: pointer; font-family: var(--font-sans); }
   position: relative;
   z-index: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 48px;
-  max-width: 1380px;
+  justify-content: center;
+  gap: 36px;
+  max-width: 800px;
   width: 100%;
   padding: 0 48px;
   padding-bottom: 40px;
+  text-align: center;
 }
 
 .hero-avatar {
@@ -598,12 +601,13 @@ button { cursor: pointer; font-family: var(--font-sans); }
 }
 
 .hero-text {
-  flex: 1;
   min-width: 0;
+  width: 100%;
 }
 .hero-pre {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 0.78rem;
   font-weight: 600;
@@ -613,6 +617,15 @@ button { cursor: pointer; font-family: var(--font-sans); }
   margin-bottom: 14px;
 }
 .hero-pre::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  order: -1;
+}
+.hero-pre::after {
   content: '';
   display: inline-block;
   width: 24px;
@@ -636,7 +649,8 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 .hero-affiliation {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 0.925rem;
   color: var(--color-text-muted);
@@ -654,6 +668,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
   flex-wrap: wrap;
   gap: 7px;
   margin-bottom: 32px;
+  justify-content: center;
 }
 .hero-tag {
   padding: 4px 12px;
@@ -677,6 +692,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .scroll-down {
@@ -3391,7 +3407,9 @@ button { cursor: pointer; font-family: var(--font-sans); }
 .cv-timeline {
   position: relative;
   margin-top: 32px;
-  max-width: 1100px;
+  max-width: none;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .cv-timeline::before {
@@ -3462,12 +3480,15 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 .cv-card {
   position: relative;
-  width: calc(50% - 12px);
+  width: calc(50% - 16px);
+  min-width: 300px;
+  max-width: 500px;
   padding: 32px;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   transition: all 0.3s ease;
+  overflow: visible;
 }
 
 .cv-entry:hover .cv-card {
@@ -3518,8 +3539,10 @@ button { cursor: pointer; font-family: var(--font-sans); }
 .education-timeline {
   position: relative;
   margin-top: 32px;
-  max-width: 850px;
-  padding-left: 60px;
+  max-width: none;
+  width: 100%;
+  padding-left: 80px;
+  overflow: visible;
 }
 
 .education-timeline::before {
@@ -3580,6 +3603,8 @@ button { cursor: pointer; font-family: var(--font-sans); }
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   transition: all 0.3s ease;
+  overflow: visible;
+  min-height: auto;
 }
 
 .education-entry:hover .education-card {
